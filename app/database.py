@@ -5,8 +5,10 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 SQLALCHEMY_DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql+psycopg://postgres:mi-post123@localhost:5432/inventario_tienda;"
+    "postgresql+psycopg://postgres:mi-post123@localhost:5432/inventario_tienda"
 )
+
+print("DATABASE_URL =", SQLALCHEMY_DATABASE_URL)
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
